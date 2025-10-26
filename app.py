@@ -1,8 +1,7 @@
 import requests
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from config import VirusTotal_key, AbuseIPDB_key
-
+from config import VirusTotal_key
 # Creation of Flask app + CORS to allow frontend to talk to backend
 app = Flask(__name__)
 CORS(app)
@@ -13,10 +12,14 @@ def hello():
     return "First check!"
 
 # API endpoint
-@app.route('/api/check-domain', methods=['POST'])
+@app.route('/api/check-domain', methods=['GET', 'POST'])
 def check_domain():
-    domain_to_check = request.json.get('domain')
-
+    if request.method == 'POST':
+        data = request.get_json()
+        domain_to_check = data.get('domain')
+    else:
+        domain_to_check = request.args.get('domain')
+        
     if not domain_to_check:
         return jsonify({'error': 'No domain provided'}), 400
     
