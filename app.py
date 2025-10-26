@@ -2,6 +2,7 @@ import requests
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from config import VirusTotal_key
+
 # Creation of Flask app + CORS to allow frontend to talk to backend
 app = Flask(__name__)
 CORS(app)
@@ -19,7 +20,7 @@ def check_domain():
         domain_to_check = data.get('domain')
     else:
         domain_to_check = request.args.get('domain')
-        
+
     if not domain_to_check:
         return jsonify({'error': 'No domain provided'}), 400
     
