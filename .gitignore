@@ -1,7 +1,7 @@
 # Python virtual environment
 venv/
 
-# Secrets file
+# API file
 config.py
 
 # Python cache
