@@ -106,20 +106,3 @@ Small, focused contributions are welcome. Suggested first steps:
 2. Create a feature branch, make changes, and open a PR.
 
 Please include tests for any new backend logic and keep UI changes small and documented.
-
-## License
-
-Add a `LICENSE` file to the repository to clarify licensing. If you'd like, I can add a permissive license (MIT) or another choice you prefer.
-
-## Contact / Next steps
-
-- If you want, I can:
-	- Inspect `app.py` and `requirements.txt` to produce exact run instructions.
-	- Add a basic `Dockerfile` and `docker-compose.yml` for local development.
-	- Add simple unit tests and a CI workflow.
-
-Ask which of the above you'd like next and I'll implement it.
-
----
-Generated README — updated to the project root.
-
