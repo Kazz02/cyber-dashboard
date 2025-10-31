@@ -41,9 +41,5 @@ python app.py
 
 ## Contributing
 
-Small, focused contributions are welcome. Suggested first steps:
-
-1. Open an issue describing your change.
-2. Create a feature branch, make changes, and open a PR.
-
+Small, focused contributions are welcome. 
 Please include tests for any new backend logic and keep UI changes small and documented.
